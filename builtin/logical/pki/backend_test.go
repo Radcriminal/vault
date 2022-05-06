@@ -5119,7 +5119,7 @@ var (
 	edCACert  string
 )
 
-func mountPKIEndpoint(t *testing.T, client *api.Client, path string) {
+func mountPKIEndpoint(t testing.TB, client *api.Client, path string) {
 	var err error
 	err = client.Sys().Mount(path, &api.MountInput{
 		Type: "pki",
