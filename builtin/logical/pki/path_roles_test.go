@@ -10,7 +10,7 @@ import (
 	"github.com/mitchellh/mapstructure"
 )
 
-func createBackendWithStorage(t *testing.T) (*backend, logical.Storage) {
+func createBackendWithStorage(t testing.TB) (*backend, logical.Storage) {
 	config := logical.TestBackendConfig()
 	config.StorageView = &logical.InmemStorage{}
 
